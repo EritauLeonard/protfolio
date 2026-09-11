@@ -1,10 +1,10 @@
-# 🚀 Portfolio — React + Tailwind + Zustand / Node.js + Express
+#  Portfolio — React + Tailwind + Zustand / Node.js + Express
 
 Stack complète portfolio avec frontend React et backend Express.js.
 
 ---
 
-## 📁 Structure du projet
+##  Structure du projet
 
 ```
 portfolio/
@@ -43,7 +43,7 @@ portfolio/
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ### Prérequis
 - Node.js **v18 ou v20 LTS** (recommandé)
@@ -103,7 +103,7 @@ npm run dev
 
 ---
 
-## 📦 Tech Stack
+##  Tech Stack
 
 ### Frontend
 - **React 18** — UI
@@ -124,7 +124,7 @@ npm run dev
 
 ---
 
-## 📧 Configuration Email (Gmail)
+##  Configuration Email (Gmail)
 
 1. Active la validation en 2 étapes sur ton compte Google
 2. Va dans **Paramètres Google → Sécurité → Mots de passe des applications**
@@ -133,7 +133,7 @@ npm run dev
 
 ---
 
-## 🚀 Déploiement
+##  Déploiement
 
 ### Backend → Railway / Render
 ```bash
@@ -154,7 +154,7 @@ npm run build
 
 ---
 
-## 🎨 Personnalisation
+## Personnalisation
 
 - **Projets** → Modifie `backend/data/projects.js`
 - **Compétences** → Modifie `backend/data/skills.js`
