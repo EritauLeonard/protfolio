@@ -1,4 +1,4 @@
-const createTransporter = require("../../config/mailer");
+const resend = require("../../config/mailer");
 
 const validateContact = (data) => {
   const errors = [];
@@ -21,18 +21,17 @@ exports.sendContact = async (req, res) => {
   }
 
   try {
-    if (!process.env.EMAIL_USER || process.env.NODE_ENV === "development") {
+    if (!process.env.RESEND_API_KEY || process.env.NODE_ENV === "development") {
       console.log("\n📧 Message reçu (mode dev) :");
       console.log(`  De : ${name} <${email}>`);
       console.log(`  Message : ${message}\n`);
       return res.status(200).json({ success: true, message: "Message reçu (mode dev) !" });
     }
 
-    const transporter = createTransporter();
-
-    await transporter.sendMail({
-      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+    await resend.emails.send({
+      from: "Portfolio Contact <onboarding@resend.dev>",
       to: process.env.EMAIL_TO,
+      reply_to: email,
       subject: `[Portfolio] Nouveau message de ${name}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px;">
