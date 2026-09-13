@@ -16,8 +16,8 @@ app.use(helmet());
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://protfolio-naqw00jgq-eritau-leonard.vercel.app",
-];
+  process.env.FRONTEND_URL,
+].filter(Boolean);
 
 app.use(
   cors({
